@@ -1,10 +1,9 @@
 import React, { useContext, useEffect } from "react";
-import { StoreContext } from "/src/store";
+import { StoreContext } from "../../store";
 
 import styles from "./Form.module.css";
 
 const Form = () => {
-
   const [state, dispatch] = useContext(StoreContext);
 
   return (
