@@ -1,0 +1,18 @@
+.m {
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+}
+
+/* label color */
+.input-field label {
+  color: rgb(145, 32, 32);
+}
+/* label focus color */
+.input-field input[type="text"] {
+  color: #aaa;
+}
+
+.input {
+  color: #aaa !important;
+}

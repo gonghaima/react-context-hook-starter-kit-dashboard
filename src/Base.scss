@@ -1,0 +1,23 @@
+$primary-color: #1c2022;
+
+html,
+body {
+  font-family: sans-serif;
+  color: white;
+  background-color: $primary-color;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+
+  width: 100%;
+  height: 100px;
+}
+Fruit {width: 100%;
+display: flex;}
