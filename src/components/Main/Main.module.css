@@ -1,0 +1,8 @@
+.main {
+  display: grid;
+  grid-template-columns: 0.3fr 1.7fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". .";
+  color: #6a6a6a;
+  padding-top: 142px;
+}

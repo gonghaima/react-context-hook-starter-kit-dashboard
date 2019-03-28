@@ -6,15 +6,17 @@ import Store from "./store";
 import Form from "./components/Form";
 import Header from "./components/Header";
 import SubHeader from "./components/SubHeader";
+import Main from "./components/Main";
 
 export default () => {
   return (
     <Store>
       <Header />
       <SubHeader />
-      <div className="App">
+      <Main>
+        <div>Nav components</div>
         <Form />
-      </div>
+      </Main>
     </Store>
   );
 };
