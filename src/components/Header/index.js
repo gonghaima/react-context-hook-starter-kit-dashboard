@@ -4,7 +4,13 @@ import styles from "./Header.module.css";
 const Header = () => {
   return (
     <div className={styles.header}>
-      <h1>Header content</h1>
+      <div className={styles.wrapper}>
+        <div className={styles.leftWrapper}>
+          <a href="/">--</a>
+          <h4>Product Name</h4>
+        </div>
+        <div>right</div>
+      </div>
     </div>
   );
 };

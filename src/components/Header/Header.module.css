@@ -16,3 +16,22 @@
   height: 70px;
   z-index: 1201;
 }
+
+.wrapper {
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.leftWrapper {
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
