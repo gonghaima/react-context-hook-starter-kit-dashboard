@@ -1,0 +1,32 @@
+.nav {
+  display: grid;
+  grid-template-columns: 0.3fr 1.7fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". .";
+  color: #6a6a6a;
+  /* padding-top: 142px; */
+}
+.itemWrapper {
+  position: fixed;
+  height: 100vh;
+  background-color: #ffffff;
+  color: #6a6a6a;
+}
+.itemUl {
+  width: 230px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  color: #6a6a6a;
+}
+.itemUl li {
+  background: #f3f2f2;
+  display: flex;
+  box-sizing: border-box;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  list-style: none;
+  color: #6a6a6a;
+}

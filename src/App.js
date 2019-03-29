@@ -7,6 +7,7 @@ import Form from "./components/Form";
 import Header from "./components/Header";
 import SubHeader from "./components/SubHeader";
 import Main from "./components/Main";
+import Nav from "./components/Nav";
 
 export default () => {
   return (
@@ -14,7 +15,7 @@ export default () => {
       <Header />
       <SubHeader />
       <Main>
-        <div>Nav components</div>
+        <Nav />
         <Form />
       </Main>
     </Store>
