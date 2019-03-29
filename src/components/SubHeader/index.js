@@ -4,7 +4,8 @@ import styles from "./SubHeader.module.css";
 const SubHeader = () => {
   return (
     <div className={styles.subheader}>
-      <p>Subheader content</p>
+      <h3>Users</h3>
+      <div className={styles.container}>All</div>
     </div>
   );
 };
