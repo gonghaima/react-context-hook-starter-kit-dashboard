@@ -36,3 +36,7 @@ h3 {
   justify-content: space-between;
   color: #272727;
 }
+
+a {
+  padding-top: 5px;
+}

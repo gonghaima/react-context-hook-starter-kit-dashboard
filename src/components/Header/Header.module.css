@@ -15,8 +15,11 @@
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   height: 70px;
   z-index: 1201;
+  fill: #fff;
 }
-
+.header svg {
+  fill: #fff;
+}
 .wrapper {
   padding-left: 32px;
   padding-right: 32px;
@@ -34,4 +37,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  fill: #fff;
 }
