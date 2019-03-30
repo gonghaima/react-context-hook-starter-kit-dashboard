@@ -1,15 +1,6 @@
 import React from "react";
 import styles from "./Nav.module.css";
-
-import {
-  Star,
-  VerifiedUser,
-  People,
-  AccountCircle,
-  Dehaze,
-  ChromeReaderMode,
-  Inbox
-} from "../../icons";
+import { Star, VerifiedUser, People, AccountCircle, Inbox } from "../../icons";
 
 const Nav = () => {
   return (
