@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Header.module.css";
-import { Dehaze } from "../../icons";
+import { ChromeReaderMode, Dehaze } from "../../icons";
 
 const Header = () => {
   return (
@@ -12,7 +12,9 @@ const Header = () => {
           </a>
           <h4>Product Name</h4>
         </div>
-        <div>right</div>
+        <div>
+          <ChromeReaderMode />
+        </div>
       </div>
     </div>
   );

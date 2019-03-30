@@ -1,3 +1,4 @@
-import Dehaze from "./dehaze";
+import Dehaze from "./Dehaze";
+import ChromeReaderMode from "./ChromeReaderMode";
 
-export { Dehaze };
+export { Dehaze, ChromeReaderMode };
