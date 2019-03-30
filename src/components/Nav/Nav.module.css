@@ -6,27 +6,42 @@
   color: #6a6a6a;
   /* padding-top: 142px; */
 }
-.itemWrapper {
+.nav .itemWrapper {
   position: fixed;
   height: 100vh;
   background-color: #ffffff;
   color: #6a6a6a;
 }
-.itemUl {
+.nav .itemUl {
   width: 230px;
   list-style: none;
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
-  color: #6a6a6a;
 }
-.itemUl li {
-  background: #f3f2f2;
+.nav .itemUl li {
   display: flex;
   box-sizing: border-box;
   padding-top: 11px;
   padding-bottom: 11px;
   list-style: none;
   color: #6a6a6a;
+}
+.nav .itemUl li:hover {
+  background: #f3f2f2;
+}
+.nav a {
+  display: flex;
+  color: #272727;
+  padding: 6px 0px 6px 30px;
+}
+
+.nav a div {
+  display: flex;
+  align-items: center;
+}
+.nav a span {
+  padding-left: 10px;
+  font-size: 15px;
 }

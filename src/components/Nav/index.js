@@ -1,16 +1,71 @@
 import React from "react";
 import styles from "./Nav.module.css";
 
+import {
+  Star,
+  VerifiedUser,
+  People,
+  AccountCircle,
+  Dehaze,
+  ChromeReaderMode,
+  Inbox
+} from "../../icons";
+
 const Nav = () => {
   return (
     <div className={styles.nav}>
       <div className={styles.itemWrapper}>
         <ul className={styles.itemUl}>
-          <li>All</li>
-          <li>Favorites</li>
-          <li>Administrator</li>
-          <li>None-Admins</li>
-          <li>Archived</li>
+          <li>
+            <a href="">
+              <div>
+                <AccountCircle />
+              </div>
+              <div>
+                <span>All Users</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div>
+                <Star />
+              </div>
+              <div>
+                <span>Favorites</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div>
+                <VerifiedUser />
+              </div>
+              <div>
+                <span>Administrator</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div>
+                <People />
+              </div>
+              <div>
+                <span>None-Admins</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div>
+                <Inbox />
+              </div>
+              <div>
+                <span>Archived</span>
+              </div>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
