@@ -1,0 +1,32 @@
+.contentItemWrapper {
+  display: flex;
+  align-items: center;
+}
+.contentItemWrapper svg {
+  border-radius: 18px;
+}
+
+.contentItemDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 9;
+  padding: 15px 0px;
+  border: 0;
+  border-bottom: #dcdbdc solid 1px;
+}
+
+.userSection {
+  flex: 1 2 0;
+  width: 0;
+}
+.detailsSection {
+  flex: 1 1 0;
+  width: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.userName {
+  color: #272727;
+}

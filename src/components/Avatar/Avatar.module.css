@@ -1,0 +1,16 @@
+.avatar {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 18px;
+  background: #f3f2f2;
+  justify-content: center;
+}
+.contentItemIcon {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  flex: 1 1 0;
+  width: 0;
+}

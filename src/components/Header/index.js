@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Header.module.css";
 import { ChromeReaderMode, Dehaze } from "../../icons";
 
-const Header = () => {
+export default () => {
   return (
     <div className={styles.header}>
       <div className={styles.wrapper}>
@@ -19,5 +19,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;
