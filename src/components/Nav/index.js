@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Nav.module.css";
 import { Star, VerifiedUser, People, AccountCircle, Inbox } from "../../icons";
 
-const Nav = () => {
+export default () => {
   return (
     <div className={styles.nav}>
       <div className={styles.itemWrapper}>
@@ -62,5 +62,3 @@ const Nav = () => {
     </div>
   );
 };
-
-export default Nav;

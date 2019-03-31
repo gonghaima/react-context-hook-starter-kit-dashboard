@@ -1,0 +1,13 @@
+.searchSection {
+  flex-grow: 9;
+  padding: 15px 0px 15px 0px;
+  outline: none;
+  border: 0;
+  -webkit-box-flex: 9;
+}
+.searchInput {
+  width: 100%;
+  font: inherit;
+  outline: none;
+  border: 0;
+}
