@@ -9,6 +9,8 @@ import MoreVert from "./MoreVert";
 import Settings from "./Settings";
 import Sort from "./Sort";
 import ViewModule from "./ViewModule";
+import Person from "./Person";
+import Search from "./Search";
 
 export {
   MoreVert,
@@ -21,5 +23,7 @@ export {
   AccountCircle,
   Dehaze,
   ChromeReaderMode,
-  Inbox
+  Inbox,
+  Person,
+  Search
 };

@@ -1,10 +1,10 @@
 .nav {
-  display: grid;
-  grid-template-columns: 0.3fr 1.7fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: ". .";
-  color: #6a6a6a;
-  /* padding-top: 142px; */
+  width: 230px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 .nav .itemWrapper {
   position: fixed;
