@@ -2,6 +2,8 @@ import React from "react";
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case "userDataReady":
+      return { ...state, userData: action.payload };
     case "addFruit":
       return state.fruits
         ? { fruits: [...state.fruits, action.payload] }
