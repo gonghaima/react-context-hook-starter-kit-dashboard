@@ -1,6 +1,6 @@
 import React from "react";
 // Global Store
-import Store from "./store";
+import { StoreProvider, useStore } from "./store";
 
 // Load components
 // import Form from "./components/Form";
@@ -12,13 +12,13 @@ import Nav from "./components/Nav";
 
 export default () => {
   return (
-    <Store>
+    <StoreProvider>
       <Header />
       <SubHeader />
       <Main>
         <Nav />
         <Content />
       </Main>
-    </Store>
+    </StoreProvider>
   );
 };
