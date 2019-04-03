@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Content.module.css";
 import Search from "../Search";
 import ContentItem from "../ContentItem";
-import { useStore } from "../../store";
+import { StoreContext } from "../../store";
 
 export default () => {
-  const { state, dispatch } = useStore();
+  const contextValues = useContext(StoreContext);
+  console.log(JSON.stringify(contextValues));
+
   return (
     <div className={styles.contentWrapper}>
       <div className={styles.contentItemWrapper}>

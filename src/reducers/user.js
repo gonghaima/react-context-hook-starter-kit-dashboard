@@ -10,6 +10,7 @@ export const userState = {
 
 export const userReducers = {
   setUserData: (state, payload) => {
+    // debugger;
     // return { user: { ...state.user, loggedIn: true } };
     return { user: { ...state.user, ...payload.users } };
   }
