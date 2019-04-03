@@ -20,15 +20,15 @@ const reducer = (state, action) => {
 
 export const StoreProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  // useEffect(() => {
-  //   userDataPromise.then(data => {
-  //     debugger;
-  //     dispatch({
-  //       type: "setUserData",
-  //       payload: data
-  //     });
-  //   });
-  // }, []);
+  useEffect(() => {
+    userDataPromise.then(data => {
+      debugger;
+      dispatch({
+        type: "setUserData",
+        payload: data
+      });
+    });
+  }, []);
 
   return (
     <StoreContext.Provider value={[state, dispatch]}>
