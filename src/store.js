@@ -19,7 +19,7 @@ const reducer = (state, action) => {
 };
 
 export const StoreProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, {});
+  const [state, dispatch] = useReducer(reducer, initialState);
   // useEffect(() => {
   //   userDataPromise.then(data => {
   //     debugger;
