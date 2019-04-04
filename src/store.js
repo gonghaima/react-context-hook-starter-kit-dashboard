@@ -1,4 +1,4 @@
-import React, { useReducer, createContext, useContext, useEffect } from "react";
+import React, { useReducer, createContext, useEffect } from "react";
 import { userState, userReducers } from "./reducers/user";
 import userDataPromise from "./api/users";
 
@@ -22,7 +22,6 @@ export const StoreProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   useEffect(() => {
     userDataPromise.then(data => {
-      debugger;
       dispatch({
         type: "setUserData",
         payload: data

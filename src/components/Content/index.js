@@ -5,16 +5,15 @@ import ContentItem from "../ContentItem";
 import { StoreContext } from "../../store";
 
 export default () => {
-  const contextValues = useContext(StoreContext);
-  console.log(JSON.stringify(contextValues));
+  const [{ users }] = useContext(StoreContext);
+  console.log(JSON.stringify(users));
 
   return (
     <div className={styles.contentWrapper}>
       <div className={styles.contentItemWrapper}>
         <Search />
-        <ContentItem />
-        <ContentItem />
-        <ContentItem />
+        {users &&
+          users.map((user, key) => <ContentItem key={key} user={user} />)}
       </div>
     </div>
   );
