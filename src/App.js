@@ -1,9 +1,8 @@
 import React from "react";
 // Global Store
-import { StoreProvider, useStore } from "./store";
+import { StoreProvider } from "./store";
 
 // Load components
-// import Form from "./components/Form";
 import Content from "./components/Content";
 import Header from "./components/Header";
 import SubHeader from "./components/SubHeader";
