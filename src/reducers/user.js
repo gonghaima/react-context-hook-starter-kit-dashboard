@@ -11,7 +11,11 @@ export const userState = {
 export const userReducers = {
   setUserData: (state, payload) => {
     const data = { users: payload };
-    debugger;
     return data;
+  },
+  setFilter: (state, payload) => {
+    console.log("payload-", payload);
+    console.log("state-", state);
+    return state;
   }
 };

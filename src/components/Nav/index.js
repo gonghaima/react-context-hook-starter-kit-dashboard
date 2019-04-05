@@ -1,64 +1,91 @@
-import React from "react";
+import React, { useReducer, useContext } from "react";
 import styles from "./Nav.module.css";
 import { Star, VerifiedUser, People, AccountCircle, Inbox } from "../../icons";
+// import { reducer } from "../../store";
+import { connect } from "../../store";
+import { StoreContext } from "../../store";
 
 export default () => {
+  // goTo = e => {
+  //   console.log(e.target.value);
+  //   e.preventDefault();
+  // };
+  // const { reducer, StoreContext } = connect;
+  // const tt = useContext(StoreContext);
+  // console.log(JSON.stringify("context-", tt));
+  // const [state, dispatch] = useReducer(reducer, tt);
+  // const dispatchvalues = val => {
+  //   dispatch({ type: "setFilter", payload: val });
+  // };
+
   return (
-    <div className={styles.nav}>
-      <div className={styles.itemWrapper}>
-        <ul className={styles.itemUl}>
-          <li>
-            <a href="">
-              <div>
-                <AccountCircle />
-              </div>
-              <div>
-                <span>All Users</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div>
-                <Star />
-              </div>
-              <div>
-                <span>Favorites</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div>
-                <VerifiedUser />
-              </div>
-              <div>
-                <span>Administrator</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div>
-                <People />
-              </div>
-              <div>
-                <span>None-Admins</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div>
-                <Inbox />
-              </div>
-              <div>
-                <span>Archived</span>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <StoreContext.Consumer>
+      {([state, dispatch]) => (
+        <div className={styles.nav}>
+          <div className={styles.itemWrapper}>
+            <ul className={styles.itemUl}>
+              <li>
+                <button
+                  href=""
+                  onClick={e =>
+                    dispatch({
+                      type: "setFilter",
+                      payload: "all"
+                    })
+                  }
+                >
+                  <div>
+                    <AccountCircle />
+                  </div>
+                  <div>
+                    <span>All Users</span>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <a href="">
+                  <div>
+                    <Star />
+                  </div>
+                  <div>
+                    <span>Favorites</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div>
+                    <VerifiedUser />
+                  </div>
+                  <div>
+                    <span>Administrator</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div>
+                    <People />
+                  </div>
+                  <div>
+                    <span>None-Admins</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div>
+                    <Inbox />
+                  </div>
+                  <div>
+                    <span>Archived</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
+    </StoreContext.Consumer>
   );
 };

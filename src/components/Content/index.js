@@ -6,7 +6,6 @@ import { StoreContext } from "../../store";
 
 export default () => {
   const [{ users }] = useContext(StoreContext);
-  console.log(JSON.stringify(users));
 
   return (
     <div className={styles.contentWrapper}>

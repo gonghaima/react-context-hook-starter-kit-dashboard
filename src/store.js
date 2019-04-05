@@ -12,14 +12,16 @@ const reducers = {
 
 export const StoreContext = createContext(initialState);
 
-const reducer = (state, action) => {
+export const reducer = (state, action) => {
   const act = reducers[action.type];
   const update = act(state, action.payload);
   return { ...state, ...update };
 };
 
+export const connect = { reducer, StoreContext };
+
 export const StoreProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, {});
   useEffect(() => {
     userDataPromise.then(data => {
       dispatch({
