@@ -18,74 +18,83 @@ export default () => {
   //   dispatch({ type: "setFilter", payload: val });
   // };
 
+  // const sendFilter = (e, dis, tp) => {
+  //   e.preventDefault();
+  //   return dis({
+  //     type: "setFilter",
+  //     payload: tp
+  //   });
+  // };
+
   return (
     <StoreContext.Consumer>
-      {([state, dispatch]) => (
-        <div className={styles.nav}>
-          <div className={styles.itemWrapper}>
-            <ul className={styles.itemUl}>
-              <li>
-                <button
-                  href=""
-                  onClick={e =>
-                    dispatch({
-                      type: "setFilter",
-                      payload: "all"
-                    })
-                  }
-                >
-                  <div>
-                    <AccountCircle />
-                  </div>
-                  <div>
-                    <span>All Users</span>
-                  </div>
-                </button>
-              </li>
-              <li>
-                <a href="">
-                  <div>
-                    <Star />
-                  </div>
-                  <div>
-                    <span>Favorites</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <div>
-                    <VerifiedUser />
-                  </div>
-                  <div>
-                    <span>Administrator</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <div>
-                    <People />
-                  </div>
-                  <div>
-                    <span>None-Admins</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <div>
-                    <Inbox />
-                  </div>
-                  <div>
-                    <span>Archived</span>
-                  </div>
-                </a>
-              </li>
-            </ul>
+      {([state, dispatch]) => {
+        const sendFilter = (e, tp) => {
+          e.preventDefault();
+          return dispatch({
+            type: "setFilter",
+            payload: tp
+          });
+        };
+        return (
+          <div className={styles.nav}>
+            <div className={styles.itemWrapper}>
+              <ul className={styles.itemUl}>
+                <li>
+                  <a href="all" onClick={e => sendFilter(e, "all")}>
+                    <div>
+                      <AccountCircle />
+                    </div>
+                    <div>
+                      <span>All Users</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="all" onClick={e => sendFilter(e, "favorites")}>
+                    <div>
+                      <Star />
+                    </div>
+                    <div>
+                      <span>Favorites</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div>
+                      <VerifiedUser />
+                    </div>
+                    <div>
+                      <span>Administrator</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div>
+                      <People />
+                    </div>
+                    <div>
+                      <span>None-Admins</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div>
+                      <Inbox />
+                    </div>
+                    <div>
+                      <span>Archived</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      )}
+        );
+      }}
     </StoreContext.Consumer>
   );
 };

@@ -16,6 +16,7 @@ export const userReducers = {
   setFilter: (state, payload) => {
     console.log("payload-", payload);
     console.log("state-", state);
+    state.users = state.users.filter(user => user.favorite === true);
     return state;
   }
 };

@@ -18,7 +18,7 @@ export const reducer = (state, action) => {
   return { ...state, ...update };
 };
 
-export const connect = { reducer, StoreContext };
+// export const connect = { reducer, StoreContext };
 
 export const StoreProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, {});
