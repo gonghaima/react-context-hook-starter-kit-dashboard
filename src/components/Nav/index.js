@@ -61,7 +61,10 @@ export default () => {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a
+                    href="administrator"
+                    onClick={e => sendFilter(e, "administrator")}
+                  >
                     <div>
                       <VerifiedUser />
                     </div>
@@ -71,7 +74,10 @@ export default () => {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a
+                    href="none-Admins"
+                    onClick={e => sendFilter(e, "none-Admins")}
+                  >
                     <div>
                       <People />
                     </div>
@@ -81,7 +87,10 @@ export default () => {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a
+                    href="archived"
+                    onClick={e => sendFilter(e, "archived")}
+                  >
                     <div>
                       <Inbox />
                     </div>

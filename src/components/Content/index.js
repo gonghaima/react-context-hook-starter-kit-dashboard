@@ -24,8 +24,8 @@ export default () => {
         <div className={styles.contentWrapper}>
           <div className={styles.contentItemWrapper}>
             <Search />
-            {state.users &&
-              state.users.map((user, key) => (
+            {state.filteredData &&
+              state.filteredData.map((user, key) => (
                 <ContentItem key={key} user={user} />
               ))}
           </div>
