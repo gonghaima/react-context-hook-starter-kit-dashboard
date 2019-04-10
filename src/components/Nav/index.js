@@ -6,26 +6,6 @@ import { connect } from "../../store";
 import { StoreContext } from "../../store";
 
 export default () => {
-  // goTo = e => {
-  //   console.log(e.target.value);
-  //   e.preventDefault();
-  // };
-  // const { reducer, StoreContext } = connect;
-  // const tt = useContext(StoreContext);
-  // console.log(JSON.stringify("context-", tt));
-  // const [state, dispatch] = useReducer(reducer, tt);
-  // const dispatchvalues = val => {
-  //   dispatch({ type: "setFilter", payload: val });
-  // };
-
-  // const sendFilter = (e, dis, tp) => {
-  //   e.preventDefault();
-  //   return dis({
-  //     type: "setFilter",
-  //     payload: tp
-  //   });
-  // };
-
   return (
     <StoreContext.Consumer>
       {([state, dispatch]) => {
@@ -87,10 +67,7 @@ export default () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="archived"
-                    onClick={e => sendFilter(e, "archived")}
-                  >
+                  <a href="archived" onClick={e => sendFilter(e, "archived")}>
                     <div>
                       <Inbox />
                     </div>
