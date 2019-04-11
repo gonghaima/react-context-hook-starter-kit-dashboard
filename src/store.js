@@ -1,24 +1,17 @@
 import React, { useReducer, createContext, useEffect } from "react";
-import { userState, userReducers } from "./reducers/user";
+import reducers from "./reducers";
 import userDataPromise from "./api/users";
 
 // combine initial states
-const initialState = { ...userState };
+const { state } = reducers;
 
-// combine reducers
-const reducers = {
-  ...userReducers
-};
-
-export const StoreContext = createContext(initialState);
+export const StoreContext = createContext(state);
 
 export const reducer = (state, action) => {
   const act = reducers[action.type];
   const update = act(state, action.payload);
   return { ...state, ...update };
 };
-
-// export const connect = { reducer, StoreContext };
 
 export const StoreProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, {});
@@ -37,7 +30,3 @@ export const StoreProvider = ({ children }) => {
     </StoreContext.Provider>
   );
 };
-
-// export const useStore = () => {
-//   return useContext(StoreContext);
-// };

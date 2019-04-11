@@ -1,8 +1,6 @@
 import React, { useReducer, useContext } from "react";
 import styles from "./Nav.module.css";
 import { Star, VerifiedUser, People, AccountCircle, Inbox } from "../../icons";
-// import { reducer } from "../../store";
-import { connect } from "../../store";
 import { StoreContext } from "../../store";
 
 export default () => {
