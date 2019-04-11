@@ -6,16 +6,20 @@ import { StoreContext } from "../../store";
 
 export default () => (
   <StoreContext.Consumer>
-    {([state]) => (
-      <div className={styles.contentWrapper}>
-        <div className={styles.contentItemWrapper}>
-          <Search />
-          {state.filteredData &&
-            state.filteredData.map((user, key) => (
-              <ContentItem key={key} user={user} />
-            ))}
+    {([state]) => {
+      console.log(`state-${JSON.stringify(state)}`);
+
+      return (
+        <div className={styles.contentWrapper}>
+          <div className={styles.contentItemWrapper}>
+            <Search />
+            {state.filteredData &&
+              state.filteredData.map((user, key) => (
+                <ContentItem key={key} user={user} />
+              ))}
+          </div>
         </div>
-      </div>
-    )}
+      );
+    }}
   </StoreContext.Consumer>
 );
