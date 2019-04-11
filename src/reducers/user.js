@@ -1,16 +1,16 @@
 import config from "../config";
 
-// export const userState = {
-//   data: [],
-//   filteredData: [],
-//   message: "",
-//   query: "All Users",
-//   selected: config.userMapping.all
-// };
+export const userState = {
+  data: [],
+  filteredData: [],
+  message: "",
+  query: "All Users",
+  selected: config.userMapping.all
+};
 
 export const userReducers = {
   setUserData: (state, payload) => {
-    const data = { users: payload, filteredData: payload };
+    const data = { ...state, users: payload, filteredData: payload };
     return data;
   },
   setFilter: (state, payload) => {

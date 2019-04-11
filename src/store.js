@@ -1,9 +1,7 @@
 import React, { useReducer, createContext, useEffect } from "react";
-import reducers from "./reducers";
+import reducers, { initialState } from "./reducers";
 import userDataPromise from "./api/users";
 
-// combine initial states
-// const { state } = reducers;
 export const StoreContext = createContext();
 
 export const reducer = (state, action) => {
@@ -13,7 +11,7 @@ export const reducer = (state, action) => {
 };
 
 export const StoreProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, { searchTerm: "default" });
+  const [state, dispatch] = useReducer(reducer, initialState);
   useEffect(() => {
     userDataPromise.then(data => {
       dispatch({
