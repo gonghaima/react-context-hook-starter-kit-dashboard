@@ -13,6 +13,13 @@ export const userReducers = {
     const data = { ...state, users: payload, filteredData: payload };
     return data;
   },
+  searchUser: (state, payload) => {
+    state.filteredData = state.users.filter(
+      user => user.fullName.includes(payload) || user.email.includes(payload)
+    );
+
+    return state;
+  },
   setFilter: (state, payload) => {
     console.log("payload-", payload);
     console.log("state-", state);
