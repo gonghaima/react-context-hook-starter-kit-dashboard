@@ -7,8 +7,6 @@ import { StoreContext } from "../../store";
 export default () => (
   <StoreContext.Consumer>
     {([state]) => {
-      console.log(`state-${JSON.stringify(state)}`);
-
       return (
         <div className={styles.contentWrapper}>
           <div className={styles.contentItemWrapper}>
