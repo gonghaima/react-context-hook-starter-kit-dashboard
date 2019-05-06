@@ -1,8 +1,15 @@
 import React from "react";
 import styles from "./Main.module.css";
+import { StoreContext } from "../../store";
 
-const Main = ({ children }) => {
-  return <div className={styles.main}>{children}</div>;
-};
-
-export default Main;
+export default ({ children }) => (
+  <StoreContext.Consumer>
+    {([state]) => {
+      return (
+        <div className={`${styles.main} ${state.darkMode ? styles.dark : ""}`}>
+          {children}
+        </div>
+      );
+    }}
+  </StoreContext.Consumer>
+);

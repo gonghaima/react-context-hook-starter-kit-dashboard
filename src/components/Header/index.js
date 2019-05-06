@@ -1,21 +1,28 @@
 import React from "react";
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 import { ChromeReaderMode, Dehaze } from "../../icons";
+import { StoreContext } from "../../store";
 
-export default () => {
-  return (
-    <div className={styles.header}>
-      <div className={styles.wrapper}>
-        <div className={styles.leftWrapper}>
-          <a href="/">
-            <Dehaze />
-          </a>
-          <h4>Product Name</h4>
+export default () => (
+  <StoreContext.Consumer>
+    {([state]) => {
+      return (
+        <div
+          className={`${styles.header} ${state.darkMode ? styles.dark : ""}`}
+        >
+          <div className={styles.wrapper}>
+            <div className={styles.leftWrapper}>
+              <a href="/">
+                <Dehaze />
+              </a>
+              <h4>Product Name</h4>
+            </div>
+            <div>
+              <ChromeReaderMode />
+            </div>
+          </div>
         </div>
-        <div>
-          <ChromeReaderMode />
-        </div>
-      </div>
-    </div>
-  );
-};
+      );
+    }}
+  </StoreContext.Consumer>
+);
