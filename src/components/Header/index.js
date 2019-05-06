@@ -5,7 +5,13 @@ import { StoreContext } from "../../store";
 
 export default () => (
   <StoreContext.Consumer>
-    {([state]) => {
+    {([state, dispatch]) => {
+      const toggleDisplay = () => {
+        return dispatch({
+          type: "toggleDisplayMode",
+          payload: ""
+        });
+      };
       return (
         <div
           className={`${styles.header} ${state.darkMode ? styles.dark : ""}`}
@@ -17,7 +23,7 @@ export default () => (
               </a>
               <h4>Product Name</h4>
             </div>
-            <div className={styles.icon}>
+            <div className={styles.icon} onClick={e => toggleDisplay(e)}>
               {state.darkMode ? <BurstMode /> : <ChromeReaderMode />}
             </div>
           </div>
