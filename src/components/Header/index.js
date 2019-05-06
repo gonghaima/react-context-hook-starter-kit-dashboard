@@ -17,7 +17,9 @@ export default () => (
               </a>
               <h4>Product Name</h4>
             </div>
-            <div>{state.darkMode ? <BurstMode /> : <ChromeReaderMode />}</div>
+            <div className={styles.icon}>
+              {state.darkMode ? <BurstMode /> : <ChromeReaderMode />}
+            </div>
           </div>
         </div>
       );

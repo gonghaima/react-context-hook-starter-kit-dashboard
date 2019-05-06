@@ -42,3 +42,9 @@
   align-items: center;
   fill: #fff;
 }
+
+.icon {
+  &:hover {
+    cursor: pointer;
+  }
+}
