@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Header.module.scss";
-import { ChromeReaderMode, Dehaze } from "../../icons";
+import { BurstMode, ChromeReaderMode, Dehaze } from "../../icons";
 import { StoreContext } from "../../store";
 
 export default () => (
@@ -17,9 +17,7 @@ export default () => (
               </a>
               <h4>Product Name</h4>
             </div>
-            <div>
-              <ChromeReaderMode />
-            </div>
+            <div>{state.darkMode ? <BurstMode /> : <ChromeReaderMode />}</div>
           </div>
         </div>
       );

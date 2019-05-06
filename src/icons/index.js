@@ -1,4 +1,5 @@
 import Dehaze from "./Dehaze";
+import BurstMode from "./BurstMode";
 import ChromeReaderMode from "./ChromeReaderMode";
 import AccountCircle from "./AccountCircle";
 import Inbox from "./Inbox";
@@ -22,6 +23,7 @@ export {
   People,
   AccountCircle,
   Dehaze,
+  BurstMode,
   ChromeReaderMode,
   Inbox,
   Person,
