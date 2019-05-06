@@ -18,6 +18,3 @@ linting check
 - [ ] E2E test
 - [ ] pre commit check
 - [ ] linting check
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
