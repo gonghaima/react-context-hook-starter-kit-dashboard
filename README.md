@@ -12,7 +12,8 @@ linting check
 
 - [x] label on sub Header should display current filter
 - [x] Dark mode - based on css mix-blend-mode
-- [ ] Hover on side menu, cover all area, instead of just text field
+- [x] Hover on side menu, cover all area, instead of just text field
+- [ ] The current item should be selected in nav
 - [ ] Responsive - hide side nav
 - [ ] Routing
 - [ ] Unit test
