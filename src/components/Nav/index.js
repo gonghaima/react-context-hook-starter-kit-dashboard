@@ -1,5 +1,5 @@
 import React, { useReducer, useContext } from "react";
-import styles from "./Nav.module.css";
+import styles from "./Nav.module.scss";
 import { Star, VerifiedUser, People, AccountCircle, Inbox } from "../../icons";
 import { StoreContext } from "../../store";
 
@@ -28,7 +28,7 @@ export default () => {
                     </div>
                   </a>
                 </li>
-                <li>
+                <li className={styles.active}>
                   <a href="all" onClick={e => sendFilter(e, "favorites")}>
                     <div>
                       <Star />
