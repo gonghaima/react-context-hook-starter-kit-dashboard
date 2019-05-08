@@ -14,7 +14,8 @@ linting check
 - [x] Dark mode - based on css mix-blend-mode
 - [x] Hover on side menu, cover all area, instead of just text field
 - [x] Smooth the font when in dark mode
-- [ ] Set up github pages
+- [x] Set up github pages
+- [ ] Evaluate useMemo
 - [ ] Nav and Main section display consistency in dark mode
 - [ ] The current item should be selected in nav
 - [ ] Fix font issue when toggle mix-blend-mode, using css font smooth
