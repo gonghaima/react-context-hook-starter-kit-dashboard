@@ -15,7 +15,7 @@ export default () => {
           });
         };
         return (
-          <div className={styles.nav}>
+          <div className={`${styles.nav} ${state.darkMode ? styles.dark : ""}`}>
             <div className={styles.itemWrapper}>
               <ul className={styles.itemUl}>
                 <li>

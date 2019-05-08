@@ -8,7 +8,11 @@ export default () => (
   <StoreContext.Consumer>
     {([state]) => {
       return (
-        <div className={styles.contentWrapper}>
+        <div
+          className={`${styles.contentWrapper} ${
+            state.darkMode ? styles.dark : ""
+          }`}
+        >
           <div className={styles.contentItemWrapper}>
             <Search />
             {state.filteredData &&

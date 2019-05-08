@@ -1,3 +1,6 @@
+.dark {
+  mix-blend-mode: difference;
+}
 .contentWrapper {
   display: flex;
   align-items: center;
