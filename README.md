@@ -16,9 +16,9 @@ linting check
 - [x] Smooth the font when in dark mode
 - [x] Set up github pages
 - [x] Nav and Main section display consistency in dark mode
+- [x] The current item should be selected in nav
+- [x] Fix font issue when toggle mix-blend-mode, using css font smooth
 - [ ] Evaluate useMemo
-- [ ] The current item should be selected in nav
-- [ ] Fix font issue when toggle mix-blend-mode, using css font smooth
 - [ ] Main content and sidebar alignment need to be the same
 - [ ] Responsive - hide side nav
 - [ ] Routing
