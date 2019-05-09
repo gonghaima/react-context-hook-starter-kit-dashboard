@@ -18,7 +18,7 @@ linting check
 - [x] Nav and Main section display consistency in dark mode
 - [x] The current item should be selected in nav
 - [x] Fix font issue when toggle mix-blend-mode, using css font smooth
-- [ ] Evaluate useMemo
+- [x] Evaluate useMemo
 - [ ] Main content and sidebar alignment need to be the same
 - [ ] Responsive - hide side nav
 - [ ] Routing
