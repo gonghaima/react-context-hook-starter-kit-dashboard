@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-context-hook-starter-kit-dashboard/precache-manifest.9d12f66133af163c18610282c657fac7.js"
+  "/react-context-hook-starter-kit-dashboard/precache-manifest.2cbb37d789b4fd3d5b090cd55bbf9027.js"
 );
 
 workbox.clientsClaim();
