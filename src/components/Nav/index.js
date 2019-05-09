@@ -20,7 +20,7 @@ export default () => {
               <ul className={styles.itemUl}>
                 <li
                   className={`${
-                    state.selected.queryValue === "all" ? styles.active : ""
+                    state.selected.queryValue === "all" ? styles.selected : ""
                   }`}
                 >
                   <a href="all" onClick={e => sendFilter(e, "all")}>
@@ -35,7 +35,7 @@ export default () => {
                 <li
                   className={`${
                     state.selected.queryValue === "favorites"
-                      ? styles.active
+                      ? styles.selected
                       : ""
                   }`}
                 >
@@ -51,7 +51,7 @@ export default () => {
                 <li
                   className={`${
                     state.selected.queryValue === "administrator"
-                      ? styles.active
+                      ? styles.selected
                       : ""
                   }`}
                 >
@@ -70,7 +70,7 @@ export default () => {
                 <li
                   className={`${
                     state.selected.queryValue === "nonAdmins"
-                      ? styles.active
+                      ? styles.selected
                       : ""
                   }`}
                 >
@@ -89,7 +89,7 @@ export default () => {
                 <li
                   className={`${
                     state.selected.queryValue === "archived"
-                      ? styles.active
+                      ? styles.selected
                       : ""
                   }`}
                 >

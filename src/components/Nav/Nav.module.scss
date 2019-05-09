@@ -19,14 +19,22 @@
     margin: 0;
     li {
       display: flex;
-      box-sizing: border-box;
-
       list-style: none;
+      border: none;
+      cursor: pointer;
       color: #6a6a6a;
+      outline: none;
+      background-position: center;
+      transition: background 0.8s;
     }
     li:hover {
-      background: #f3f2f2;
-      cursor: pointer;
+      background: #f3f2f2 radial-gradient(circle, transparent 1%, #f3f2f2 1%)
+        center/15000%;
+    }
+    li:active {
+      background-color: #6a6a6a;
+      background-size: 100%;
+      transition: background 0s;
     }
   }
 
@@ -52,7 +60,7 @@
     }
   }
 
-  .active {
+  .selected {
     background: #f3f2f2;
     cursor: pointer;
   }
