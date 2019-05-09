@@ -18,7 +18,11 @@ export default () => {
           <div className={`${styles.nav} ${state.darkMode ? styles.dark : ""}`}>
             <div className={styles.itemWrapper}>
               <ul className={styles.itemUl}>
-                <li>
+                <li
+                  className={`${
+                    state.selected.queryValue === "all" ? styles.active : ""
+                  }`}
+                >
                   <a href="all" onClick={e => sendFilter(e, "all")}>
                     <div>
                       <AccountCircle />
@@ -28,7 +32,13 @@ export default () => {
                     </div>
                   </a>
                 </li>
-                <li className={styles.active}>
+                <li
+                  className={`${
+                    state.selected.queryValue === "favorites"
+                      ? styles.active
+                      : ""
+                  }`}
+                >
                   <a href="all" onClick={e => sendFilter(e, "favorites")}>
                     <div>
                       <Star />
@@ -38,7 +48,13 @@ export default () => {
                     </div>
                   </a>
                 </li>
-                <li>
+                <li
+                  className={`${
+                    state.selected.queryValue === "administrator"
+                      ? styles.active
+                      : ""
+                  }`}
+                >
                   <a
                     href="administrator"
                     onClick={e => sendFilter(e, "administrator")}
@@ -51,7 +67,13 @@ export default () => {
                     </div>
                   </a>
                 </li>
-                <li>
+                <li
+                  className={`${
+                    state.selected.queryValue === "nonAdmins"
+                      ? styles.active
+                      : ""
+                  }`}
+                >
                   <a
                     href="none-Admins"
                     onClick={e => sendFilter(e, "none-Admins")}
@@ -64,7 +86,13 @@ export default () => {
                     </div>
                   </a>
                 </li>
-                <li>
+                <li
+                  className={`${
+                    state.selected.queryValue === "archived"
+                      ? styles.active
+                      : ""
+                  }`}
+                >
                   <a href="archived" onClick={e => sendFilter(e, "archived")}>
                     <div>
                       <Inbox />
