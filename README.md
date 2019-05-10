@@ -25,3 +25,12 @@ TODO:
 - [ ] E2E test
 - [ ] pre commit check
 - [ ] linting check
+
+useMemo - performance improvement
+
+```javascript
+  const [count, setCount] = React.useState(0)
+  //const value = React.useMemo(() => [count, setCount], [count])
+  const value = React.useState(0);
+  return <CountContext.Provider value={value} {...props} />
+```
