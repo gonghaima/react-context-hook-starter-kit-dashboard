@@ -23,7 +23,7 @@ TODO:
 - [ ] Routing
 - [ ] Unit test
 - [ ] E2E test
-- [ ] pre commit check
+- [x] pre commit check
 - [ ] linting check
 
 useMemo - performance improvement
