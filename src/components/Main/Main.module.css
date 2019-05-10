@@ -10,3 +10,8 @@
   padding-top: 142px;
   background-color: #d9d8d9;
 }
+@media only screen and (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
