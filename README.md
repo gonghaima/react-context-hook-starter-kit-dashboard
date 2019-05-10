@@ -19,7 +19,7 @@ TODO:
 - [x] Fix font issue when toggle mix-blend-mode, using css font smooth
 - [x] Evaluate useMemo
 - [x] Main content and sidebar alignment need to be the same
-- [ ] Responsive - hide side nav
+- [x] Responsive - hide side nav
 - [ ] Routing
 - [ ] Unit test
 - [ ] E2E test
