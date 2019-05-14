@@ -1,4 +1,4 @@
-import React, { useReducer, useContext } from "react";
+import React from "react";
 import styles from "./Nav.module.scss";
 import { Star, VerifiedUser, People, AccountCircle, Inbox } from "../../icons";
 import { StoreContext } from "../../store";
