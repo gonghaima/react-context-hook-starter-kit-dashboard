@@ -24,7 +24,7 @@ TODO:
 - [ ] Unit test
 - [ ] E2E test
 - [x] pre commit check
-- [ ] linting check
+- [x] linting check
 
 useMemo - performance improvement
 
@@ -34,3 +34,4 @@ useMemo - performance improvement
   const value = React.useState(0);
   return <CountContext.Provider value={value} {...props} />
 ```
+
