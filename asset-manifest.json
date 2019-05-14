@@ -1,13 +1,15 @@
 {
-  "main.css": "/react-context-hook-starter-kit-dashboard/static/css/main.fa078f43.chunk.css",
-  "main.js": "/react-context-hook-starter-kit-dashboard/static/js/main.bf556cc9.chunk.js",
-  "main.js.map": "/react-context-hook-starter-kit-dashboard/static/js/main.bf556cc9.chunk.js.map",
-  "runtime~main.js": "/react-context-hook-starter-kit-dashboard/static/js/runtime~main.2c2bec09.js",
-  "runtime~main.js.map": "/react-context-hook-starter-kit-dashboard/static/js/runtime~main.2c2bec09.js.map",
-  "static/js/2.dbda7ae8.chunk.js": "/react-context-hook-starter-kit-dashboard/static/js/2.dbda7ae8.chunk.js",
-  "static/js/2.dbda7ae8.chunk.js.map": "/react-context-hook-starter-kit-dashboard/static/js/2.dbda7ae8.chunk.js.map",
-  "index.html": "/react-context-hook-starter-kit-dashboard/index.html",
-  "precache-manifest.2cbb37d789b4fd3d5b090cd55bbf9027.js": "/react-context-hook-starter-kit-dashboard/precache-manifest.2cbb37d789b4fd3d5b090cd55bbf9027.js",
-  "service-worker.js": "/react-context-hook-starter-kit-dashboard/service-worker.js",
-  "static/css/main.fa078f43.chunk.css.map": "/react-context-hook-starter-kit-dashboard/static/css/main.fa078f43.chunk.css.map"
+  "files": {
+    "main.css": "/static/css/main.f055d5b1.chunk.css",
+    "main.js": "/static/js/main.dc0707c7.chunk.js",
+    "main.js.map": "/static/js/main.dc0707c7.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.d3922739.chunk.js": "/static/js/2.d3922739.chunk.js",
+    "static/js/2.d3922739.chunk.js.map": "/static/js/2.d3922739.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.bc3b015ff1d62bc4c7eded0d783c26a7.js": "/precache-manifest.bc3b015ff1d62bc4c7eded0d783c26a7.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.f055d5b1.chunk.css.map": "/static/css/main.f055d5b1.chunk.css.map"
+  }
 }
