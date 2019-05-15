@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Nav.module.scss";
 import { Star, VerifiedUser, People, AccountCircle, Inbox } from "../../icons";
 import { StoreContext } from "../../store";
@@ -6,7 +7,7 @@ import { StoreContext } from "../../store";
 export default () => {
   const [state, dispatch] = React.useContext(StoreContext);
   const sendFilter = (e, tp) => {
-    e.preventDefault();
+    // e.preventDefault();
     return dispatch({
       type: "setFilter",
       payload: tp
@@ -21,28 +22,28 @@ export default () => {
               state.selected.queryValue === "all" ? styles.selected : ""
             }`}
           >
-            <a href="all" onClick={e => sendFilter(e, "all")}>
+            <Link to="all" onClick={e => sendFilter(e, "all")}>
               <div>
                 <AccountCircle />
               </div>
               <div>
                 <span>All Users</span>
               </div>
-            </a>
+            </Link>
           </li>
           <li
             className={`${
               state.selected.queryValue === "favorites" ? styles.selected : ""
             }`}
           >
-            <a href="all" onClick={e => sendFilter(e, "favorites")}>
+            <Link to="favorites" onClick={e => sendFilter(e, "favorites")}>
               <div>
                 <Star />
               </div>
               <div>
                 <span>Favorites</span>
               </div>
-            </a>
+            </Link>
           </li>
           <li
             className={`${
@@ -51,8 +52,8 @@ export default () => {
                 : ""
             }`}
           >
-            <a
-              href="administrator"
+            <Link
+              to="administrator"
               onClick={e => sendFilter(e, "administrator")}
             >
               <div>
@@ -61,35 +62,35 @@ export default () => {
               <div>
                 <span>Administrator</span>
               </div>
-            </a>
+            </Link>
           </li>
           <li
             className={`${
               state.selected.queryValue === "nonAdmins" ? styles.selected : ""
             }`}
           >
-            <a href="none-Admins" onClick={e => sendFilter(e, "none-Admins")}>
+            <Link to="nonAdmins" onClick={e => sendFilter(e, "none-Admins")}>
               <div>
                 <People />
               </div>
               <div>
                 <span>None-Admins</span>
               </div>
-            </a>
+            </Link>
           </li>
           <li
             className={`${
               state.selected.queryValue === "archived" ? styles.selected : ""
             }`}
           >
-            <a href="archived" onClick={e => sendFilter(e, "archived")}>
+            <Link to="archived" onClick={e => sendFilter(e, "archived")}>
               <div>
                 <Inbox />
               </div>
               <div>
                 <span>Archived</span>
               </div>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
