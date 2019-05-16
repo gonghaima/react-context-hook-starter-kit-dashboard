@@ -15,6 +15,23 @@ import SubHeader from "./components/SubHeader";
 import Main from "./components/Main";
 import Nav from "./components/Nav";
 
+const routeItems = [
+  "",
+  "all",
+  "favorites",
+  "administrator",
+  "nonAdmins",
+  "archived"
+];
+
+const generateRoutes = items => {
+  return items.map(item => {
+    if (item === "")
+      return <Route exact path="/" component={defaultComponent} />;
+    return <Route path={`/${item}`} component={defaultComponent} />;
+  });
+};
+
 const defaultComponent = () => (
   <>
     <Header />
@@ -29,14 +46,7 @@ const defaultComponent = () => (
 export default () => {
   return (
     <StoreProvider>
-      <Router>
-        <Route exact path="/" component={defaultComponent} />
-        <Route path="/all" component={defaultComponent} />
-        <Route path="/favorites" component={defaultComponent} />
-        <Route path="/administrator" component={defaultComponent} />
-        <Route path="/nonAdmins" component={defaultComponent} />
-        <Route path="/archived" component={defaultComponent} />
-      </Router>
+      <Router>{generateRoutes(routeItems)}</Router>
     </StoreProvider>
   );
 };
