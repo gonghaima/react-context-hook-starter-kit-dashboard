@@ -38,7 +38,7 @@ export const userReducers = {
       state.selected = config.userMapping.administrator;
     }
 
-    if (payload === "none-Admins") {
+    if (payload === "nonAdmins") {
       state.filteredData = state.users.filter(
         user => user.administrator !== true
       );
