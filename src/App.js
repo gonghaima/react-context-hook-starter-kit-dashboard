@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Navlink
-} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 // Global Store
 import { StoreProvider } from "./store";
 
