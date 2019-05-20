@@ -20,7 +20,7 @@ TODO:
 - [x] Evaluate useMemo
 - [x] Main content and sidebar alignment need to be the same
 - [x] Responsive - hide side nav
-- [ ] Routing
+- [x] Routing
 - [ ] Unit test
 - [ ] E2E test
 - [x] pre commit check
@@ -29,9 +29,8 @@ TODO:
 useMemo - performance improvement
 
 ```javascript
-  const [count, setCount] = React.useState(0)
-  //const value = React.useMemo(() => [count, setCount], [count])
-  const value = React.useState(0);
-  return <CountContext.Provider value={value} {...props} />
+const [count, setCount] = React.useState(0);
+//const value = React.useMemo(() => [count, setCount], [count])
+const value = React.useState(0);
+return <CountContext.Provider value={value} {...props} />;
 ```
-
