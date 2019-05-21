@@ -21,6 +21,7 @@ TODO:
 - [x] Main content and sidebar alignment need to be the same
 - [x] Responsive - hide side nav
 - [x] Routing
+- [ ] Try "sticky instead of fixed", check differences.
 - [ ] Unit test
 - [ ] E2E test
 - [x] pre commit check
