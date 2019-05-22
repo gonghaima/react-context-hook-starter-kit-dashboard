@@ -9,13 +9,16 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "react-test-renderer": "^16.8.6"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test-coverage": "yarn test -- --coverage --watchAll=false",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "test-coverage": "yarn test --coverage --watchAll=false",
+    "snap-shot-update": "yarn test -u",
     "eject": "react-scripts eject",
     "precommit": "yarn test",
     "predeploy": "npm run build",
@@ -30,7 +33,9 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.{js,jsx,ts,tsx}.snap",
       "!<rootDir>/node_modules/",
+      "!<rootDir>/src/index.js",
       "!<rootDir>/path/to/dir/"
     ],
     "coverageThreshold": {
