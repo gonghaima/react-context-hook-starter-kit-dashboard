@@ -6,4 +6,5 @@ it("renders without crashing", () => {
   const div = document.createElement("div");
   const appComponent = TestRenderer.create(<App />, div);
   expect(appComponent).toBeDefined();
+  expect(appComponent.toJSON()).toMatchSnapshot();
 });
