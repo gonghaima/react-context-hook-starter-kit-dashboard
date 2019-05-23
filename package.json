@@ -38,6 +38,8 @@
       "!src/**/*.{js,jsx,ts,tsx}.snap",
       "!<rootDir>/node_modules/",
       "!<rootDir>/src/index.js",
+      "!<rootDir>/src/icons/BurstMode.js",
+      "!<rootDir>/src/icons/Person.js",
       "!<rootDir>/path/to/dir/"
     ],
     "coverageThreshold": {
