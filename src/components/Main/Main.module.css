@@ -7,7 +7,6 @@
   grid-template-rows: 1fr;
   grid-template-areas: ". .";
   color: #6a6a6a;
-  padding-top: 142px;
   background-color: #d9d8d9;
 }
 @media only screen and (max-width: 768px) {
