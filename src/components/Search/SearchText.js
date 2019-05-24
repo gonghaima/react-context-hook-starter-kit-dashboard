@@ -7,7 +7,7 @@ export default () => {
     <StoreContext.Consumer>
       {([state, dispatch]) => {
         const setSearch = e => {
-          return dispatch({ type: "searchUser", payload: e.target.value });
+          dispatch({ type: "searchUser", payload: e.target.value });
         };
         return (
           <div className={styles.searchSection}>
