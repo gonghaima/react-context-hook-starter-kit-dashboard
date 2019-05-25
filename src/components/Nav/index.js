@@ -8,7 +8,7 @@ export default props => {
   const history = props;
   const [state, dispatch] = React.useContext(StoreContext);
   const sendFilter = send(dispatch, history);
-  const generateAnchor = (
+  const generateNavItems = (
     children,
     sf,
     key,
@@ -25,53 +25,27 @@ export default props => {
       </a>
     </li>
   );
+
+  const navItemsData = [
+    { icon: <AccountCircle />, key: "all", display: "All Users" },
+    { icon: <Star />, key: "favorites", display: "Favorites" },
+    { icon: <VerifiedUser />, key: "administrator", display: "Administrator" },
+    { icon: <People />, key: "nonAdmins", display: "None-Admins" },
+    { icon: <Inbox />, key: "archived", display: "Archived" }
+  ];
   return (
     <div className={`${styles.nav} ${state.darkMode ? styles.dark : ""}`}>
       <div className={styles.itemWrapper}>
         <ul className={styles.itemUl}>
-          {generateAnchor(
-            <AccountCircle />,
-            sendFilter,
-            "all",
-            "All Users",
-            state.selected.queryValue,
-            styles.selected
-          )}
-
-          {generateAnchor(
-            <Star />,
-            sendFilter,
-            "favorites",
-            "Favorites",
-            state.selected.queryValue,
-            styles.selected
-          )}
-
-          {generateAnchor(
-            <VerifiedUser />,
-            sendFilter,
-            "administrator",
-            "Administrator",
-            state.selected.queryValue,
-            styles.selected
-          )}
-
-          {generateAnchor(
-            <People />,
-            sendFilter,
-            "nonAdmins",
-            "None-Admins",
-            state.selected.queryValue,
-            styles.selected
-          )}
-
-          {generateAnchor(
-            <Inbox />,
-            sendFilter,
-            "archived",
-            "Archived",
-            state.selected.queryValue,
-            styles.selected
+          {navItemsData.map(({ icon, key, display }) =>
+            generateNavItems(
+              icon,
+              sendFilter,
+              key,
+              display,
+              state.selected.queryValue,
+              styles.selected
+            )
           )}
         </ul>
       </div>
