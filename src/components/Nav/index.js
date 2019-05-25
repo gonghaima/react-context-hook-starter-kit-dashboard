@@ -2,20 +2,12 @@ import React from "react";
 import styles from "./Nav.module.scss";
 import { Star, VerifiedUser, People, AccountCircle, Inbox } from "../../icons";
 import { StoreContext } from "../../store";
+import { send } from "./util";
 
 export default props => {
   const history = props;
   const [state, dispatch] = React.useContext(StoreContext);
-  const sendFilter = (e, tp) => {
-    e.preventDefault();
-    dispatch({
-      type: "setFilter",
-      payload: tp
-    });
-    setTimeout(() => {
-      history.push(tp);
-    }, 2000);
-  };
+  const sendFilter = send(dispatch, history);
   const generateAnchor = (children, sf, key, displayText) => (
     <a href="/" onClick={e => sf(e, key)}>
       <div>{children}</div>
