@@ -16,6 +16,14 @@ export default props => {
       history.push(tp);
     }, 2000);
   };
+  const generateAnchor = (children, sf, key, displayText) => (
+    <a href="/" onClick={e => sf(e, key)}>
+      <div>{children}</div>
+      <div>
+        <span>{displayText}</span>
+      </div>
+    </a>
+  );
   return (
     <div className={`${styles.nav} ${state.darkMode ? styles.dark : ""}`}>
       <div className={styles.itemWrapper}>
@@ -25,28 +33,14 @@ export default props => {
               state.selected.queryValue === "all" ? styles.selected : ""
             }`}
           >
-            <a href="all" onClick={e => sendFilter(e, "all")}>
-              <div>
-                <AccountCircle />
-              </div>
-              <div>
-                <span>All Users</span>
-              </div>
-            </a>
+            {generateAnchor(<AccountCircle />, sendFilter, "all", "All Users")}
           </li>
           <li
             className={`${
               state.selected.queryValue === "favorites" ? styles.selected : ""
             }`}
           >
-            <a href="favorites" onClick={e => sendFilter(e, "favorites")}>
-              <div>
-                <Star />
-              </div>
-              <div>
-                <span>Favorites</span>
-              </div>
-            </a>
+            {generateAnchor(<Star />, sendFilter, "favorites", "Favorites")}
           </li>
           <li
             className={`${
@@ -55,45 +49,26 @@ export default props => {
                 : ""
             }`}
           >
-            <a
-              href="administrator"
-              onClick={e => sendFilter(e, "administrator")}
-            >
-              <div>
-                <VerifiedUser />
-              </div>
-              <div>
-                <span>Administrator</span>
-              </div>
-            </a>
+            {generateAnchor(
+              <VerifiedUser />,
+              sendFilter,
+              "administrator",
+              "Administrator"
+            )}
           </li>
           <li
             className={`${
               state.selected.queryValue === "nonAdmins" ? styles.selected : ""
             }`}
           >
-            <a href="nonAdmins" onClick={e => sendFilter(e, "nonAdmins")}>
-              <div>
-                <People />
-              </div>
-              <div>
-                <span>None-Admins</span>
-              </div>
-            </a>
+            {generateAnchor(<People />, sendFilter, "nonAdmins", "None-Admins")}
           </li>
           <li
             className={`${
               state.selected.queryValue === "archived" ? styles.selected : ""
             }`}
           >
-            <a href="archived" onClick={e => sendFilter(e, "archived")}>
-              <div>
-                <Inbox />
-              </div>
-              <div>
-                <span>Archived</span>
-              </div>
-            </a>
+            {generateAnchor(<Inbox />, sendFilter, "archived", "Archived")}
           </li>
         </ul>
       </div>

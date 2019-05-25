@@ -142,7 +142,7 @@ Array [
             className="selected"
           >
             <a
-              href="all"
+              href="/"
               onClick={[Function]}
             >
               <div>
@@ -172,7 +172,7 @@ Array [
             className=""
           >
             <a
-              href="favorites"
+              href="/"
               onClick={[Function]}
             >
               <div>
@@ -206,7 +206,7 @@ Array [
             className=""
           >
             <a
-              href="administrator"
+              href="/"
               onClick={[Function]}
             >
               <div>
@@ -236,7 +236,7 @@ Array [
             className=""
           >
             <a
-              href="nonAdmins"
+              href="/"
               onClick={[Function]}
             >
               <div>
@@ -266,7 +266,7 @@ Array [
             className=""
           >
             <a
-              href="archived"
+              href="/"
               onClick={[Function]}
             >
               <div>
