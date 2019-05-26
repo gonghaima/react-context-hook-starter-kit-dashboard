@@ -16,7 +16,7 @@ export default props => {
     qVal,
     styleSelected
   ) => (
-    <li className={`${qVal === key ? styleSelected : ""}`}>
+    <li key={key} className={`${qVal === key ? styleSelected : ""}`}>
       <a href="/" onClick={e => sf(e, key)}>
         <div>{children}</div>
         <div>
