@@ -1,6 +1,6 @@
-import React, { useReducer, createContext, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import { StoreProvider, StoreContext, reducer } from "../../store";
+import { StoreContext } from "../../store";
 import { initialState } from "../../reducers";
 import Header from "./index";
 import { act } from "react-dom/test-utils";
