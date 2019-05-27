@@ -2,30 +2,12 @@ import React from "react";
 import styles from "./Nav.module.scss";
 import { Star, VerifiedUser, People, AccountCircle, Inbox } from "../../icons";
 import { StoreContext } from "../../store";
-import { send } from "./util";
+import { send, generateNavItems } from "./util";
 
 export default props => {
   const history = props;
   const [state, dispatch] = React.useContext(StoreContext);
   const sendFilter = send(dispatch, history);
-  const generateNavItems = (
-    children,
-    sf,
-    key,
-    displayText,
-    qVal,
-    styleSelected
-  ) => (
-    <li key={key} className={`${qVal === key ? styleSelected : ""}`}>
-      <a href="/" onClick={e => sf(e, key)}>
-        <div>{children}</div>
-        <div>
-          <span>{displayText}</span>
-        </div>
-      </a>
-    </li>
-  );
-
   const navItemsData = [
     { icon: <AccountCircle />, key: "all", display: "All Users" },
     { icon: <Star />, key: "favorites", display: "Favorites" },
