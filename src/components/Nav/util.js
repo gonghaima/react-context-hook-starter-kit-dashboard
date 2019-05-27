@@ -12,14 +12,14 @@ export const send = (dispatch, history) => (e, tp) => {
 
 export const generateNavItems = (
   children,
-  sf,
+  routeTo,
   key,
   displayText,
   qVal,
   styleSelected
 ) => (
   <li key={key} className={`${qVal === key ? styleSelected : ""}`}>
-    <a href="/" onClick={e => sf(e, key)}>
+    <a href="/" onClick={e => routeTo(e, key)}>
       <div>{children}</div>
       <div>
         <span>{displayText}</span>
