@@ -22,7 +22,7 @@ TODO:
 - [x] Responsive - hide side nav
 - [x] Routing
 - [x] Try "sticky instead of fixed", check differences.
-- [ ] Unit test
+- [x] Unit test
 - [ ] E2E test
 - [x] pre commit check
 - [x] linting check
