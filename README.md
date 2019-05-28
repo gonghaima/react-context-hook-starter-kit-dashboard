@@ -23,6 +23,8 @@ TODO:
 - [x] Routing
 - [x] Try "sticky instead of fixed", check differences.
 - [x] Unit test
+- [ ] Routing fix
+- [ ] Layout abstraction
 - [ ] E2E test
 - [x] pre commit check
 - [x] linting check

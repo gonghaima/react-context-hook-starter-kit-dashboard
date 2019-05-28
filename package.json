@@ -27,6 +27,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "cypress:open": "cypress open",
+    "cypress:run": "yarn start & cypress run",
     "ct": "cypress run --record --key 7e57d88b-9be7-44cf-8039-47263ff266f3",
     "gh-pages": "^2.0.1"
   },

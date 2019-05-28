@@ -19,7 +19,7 @@ export const generateNavItems = (
   styleSelected
 ) => (
   <li key={key} className={`${qVal === key ? styleSelected : ""}`}>
-    <a href="/" onClick={e => routeTo(e, key)}>
+    <a href="/" id={key} onClick={e => routeTo(e, key)}>
       <div>{children}</div>
       <div>
         <span>{displayText}</span>
