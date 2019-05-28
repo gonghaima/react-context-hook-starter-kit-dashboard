@@ -8,8 +8,7 @@ import { send } from "./util";
 export default ({ history, location }) => {
   const [state, dispatch] = React.useContext(StoreContext);
   useEffect(() => {
-    if (location.pathname.slice(1) !== state.selected.queryValue)
-      send(dispatch, history, location.pathname.slice(1));
+    send(dispatch, history, location, state);
   });
   return (
     <div

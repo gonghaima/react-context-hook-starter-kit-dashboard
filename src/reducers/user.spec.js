@@ -11,9 +11,16 @@ it("should provide expected utils", () => {
   expect(setUserDataResult.users[0].name).toEqual("steven");
 });
 
+it("should validate state first", () => {
+  userState.users = mockedUserData;
+  const filteredStateNonAdmin = userReducers.setFilter(null, "nonAdmins");
+  expect(filteredStateNonAdmin).toEqual(null);
+
+  const filteredStateAdmin = userReducers.setFilter({}, "administrator");
+  expect(filteredStateAdmin).toEqual({});
+});
+
 it("should provide setFilter function", () => {
-  //   userState.users = userState.selected;
-  // console.log(userState);
   userState.users = mockedUserData;
   const filteredStateNonAdmin = userReducers.setFilter(userState, "nonAdmins");
   expect(filteredStateNonAdmin.filteredData[0].administrator).toEqual(false);
