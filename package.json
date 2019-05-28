@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cypress": "^3.3.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-15": "^1.4.0",
     "gh-pages": "^2.0.1",
@@ -25,9 +26,9 @@
     "precommit": "yarn test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "gh-pages": "^2.0.1",
-    "node-sass": "4.11.0",
-    "prop-types": "15.7.2"
+    "cypress:open": "cypress open",
+    "ct": "cypress run --record --key 7e57d88b-9be7-44cf-8039-47263ff266f3",
+    "gh-pages": "^2.0.1"
   },
   "eslintConfig": {
     "extends": "react-app"
