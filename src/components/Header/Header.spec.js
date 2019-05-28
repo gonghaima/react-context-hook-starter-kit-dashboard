@@ -28,7 +28,7 @@ test("Header with ReactDOM should render successfully", () => {
   expect(container.children[0].attributes[0].value).toBe("header ");
 });
 
-test("Header with ReactDOM in darkMode should render successfully", () => {
+test("Header in darkMode should render successfully", () => {
   act(() => {
     ReactDOM.render(
       <StoreContext.Provider

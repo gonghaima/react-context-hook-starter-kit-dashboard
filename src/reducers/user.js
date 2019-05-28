@@ -4,7 +4,7 @@ export const userState = {
   data: [],
   filteredData: [],
   message: "",
-  query: "All Users",
+  query: "all",
   selected: config.userMapping.all
 };
 
@@ -21,10 +21,9 @@ export const userReducers = {
     return state;
   },
   setFilter: (state, payload) => {
+    if (!state || !state.users) return state;
     if (payload === "favorites") {
-      state.filteredData = state.filteredData.filter(
-        user => user.favorite === true
-      );
+      state.filteredData = state.users.filter(user => user.favorite === true);
       state.selected = config.userMapping.favorites;
     }
     if (payload === "all") {

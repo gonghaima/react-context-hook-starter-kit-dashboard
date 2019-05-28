@@ -16,7 +16,7 @@ afterEach(() => {
   container = null;
 });
 
-test("Header with ReactDOM in darkMode should render successfully", () => {
+test("Subheader with ReactDOM in darkMode should render successfully", () => {
   act(() => {
     ReactDOM.render(
       <StoreContext.Provider

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { StoreContext } from "../../store";
-import ContentComponent from "./index";
+import Content from "./index";
 import { act } from "react-dom/test-utils";
 
 let container;
@@ -20,7 +20,7 @@ afterEach(() => {
   containerDarkMode = null;
 });
 
-test("Header with ReactDOM in darkMode should render successfully", () => {
+test("Content in darkMode should render successfully", () => {
   act(() => {
     const mockState = {
       filteredData: [
@@ -34,8 +34,16 @@ test("Header with ReactDOM in darkMode should render successfully", () => {
           favorite: true,
           archived: false
         }
-      ]
+      ],
+      selected: { queryValue: "" }
     };
+
+    const location = {};
+    location.pathname = "/all";
+    const history = {};
+    history.push = () => {};
+
+    const ContentComponent = () => Content({ location, history });
 
     const mockDarkModeState = { ...mockState, ...{ darkMode: true } };
 
@@ -47,7 +55,7 @@ test("Header with ReactDOM in darkMode should render successfully", () => {
     );
     ReactDOM.render(
       <StoreContext.Provider value={[mockDarkModeState, () => {}]}>
-        <ContentComponent />
+        <ContentComponent location={location} history={history} />
       </StoreContext.Provider>,
       containerDarkMode
     );

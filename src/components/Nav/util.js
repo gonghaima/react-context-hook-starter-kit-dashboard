@@ -5,9 +5,7 @@ export const send = (dispatch, history) => (e, tp) => {
     type: "setFilter",
     payload: tp
   });
-  setTimeout(() => {
-    history.push(tp);
-  }, 2000);
+  history.push(tp);
 };
 
 export const generateNavItems = (

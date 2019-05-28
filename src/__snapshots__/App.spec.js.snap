@@ -143,6 +143,7 @@ Array [
           >
             <a
               href="/"
+              id="all"
               onClick={[Function]}
             >
               <div>
@@ -173,6 +174,7 @@ Array [
           >
             <a
               href="/"
+              id="favorites"
               onClick={[Function]}
             >
               <div>
@@ -207,6 +209,7 @@ Array [
           >
             <a
               href="/"
+              id="administrator"
               onClick={[Function]}
             >
               <div>
@@ -237,6 +240,7 @@ Array [
           >
             <a
               href="/"
+              id="nonAdmins"
               onClick={[Function]}
             >
               <div>
@@ -267,6 +271,7 @@ Array [
           >
             <a
               href="/"
+              id="archived"
               onClick={[Function]}
             >
               <div>
