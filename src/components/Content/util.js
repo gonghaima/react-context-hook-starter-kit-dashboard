@@ -4,6 +4,5 @@ export const send = (dispatch, history, location, state) => {
       type: "setFilter",
       payload: location.pathname.slice(1)
     });
-    history.push(location.pathname.slice(1));
   }
 };
