@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // Global Store
 import { StoreProvider } from "./store";
 
@@ -47,7 +47,9 @@ const generateRoutes = items => {
 export default () => {
   return (
     <StoreProvider>
-      <Router>{generateRoutes(routeItems)}</Router>
+      <Router>
+        <Switch>{generateRoutes(routeItems)}</Switch>
+      </Router>
     </StoreProvider>
   );
 };

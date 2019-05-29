@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router} from "react-router-dom";
 import { StoreContext } from "../../store";
 import { initialState } from "../../reducers";
 import Nav from "./index";
@@ -20,7 +21,9 @@ test("Nav with ReactDOM should render successfully", () => {
   act(() => {
     ReactDOM.render(
       <StoreContext.Provider value={[initialState, () => {}]}>
-        <Nav />
+        <Router>
+          <Nav />
+        </Router>
       </StoreContext.Provider>,
       container
     );
@@ -34,7 +37,9 @@ test("Nav with ReactDOM in darkMode should render successfully", () => {
       <StoreContext.Provider
         value={[{ ...initialState, ...{ darkMode: true } }, () => {}]}
       >
-        <Nav />
+        <Router>
+          <Nav />
+        </Router>
       </StoreContext.Provider>,
       container
     );

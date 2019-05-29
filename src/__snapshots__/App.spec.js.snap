@@ -142,7 +142,8 @@ Array [
             className="selected"
           >
             <a
-              href="/"
+              aria-current={null}
+              href="/all"
               id="all"
               onClick={[Function]}
             >
@@ -173,7 +174,8 @@ Array [
             className=""
           >
             <a
-              href="/"
+              aria-current={null}
+              href="/favorites"
               id="favorites"
               onClick={[Function]}
             >
@@ -208,7 +210,8 @@ Array [
             className=""
           >
             <a
-              href="/"
+              aria-current={null}
+              href="/administrator"
               id="administrator"
               onClick={[Function]}
             >
@@ -239,7 +242,8 @@ Array [
             className=""
           >
             <a
-              href="/"
+              aria-current={null}
+              href="/nonAdmins"
               id="nonAdmins"
               onClick={[Function]}
             >
@@ -270,7 +274,8 @@ Array [
             className=""
           >
             <a
-              href="/"
+              aria-current={null}
+              href="/archived"
               id="archived"
               onClick={[Function]}
             >
