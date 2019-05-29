@@ -5,10 +5,10 @@ import ContentItem from "../ContentItem";
 import { StoreContext } from "../../store";
 import { send } from "./util";
 
-export default ({ history, location }) => {
+export default ({ location }) => {
   const [state, dispatch] = React.useContext(StoreContext);
   useEffect(() => {
-    send(dispatch, history, location, state);
+    send(dispatch, location, state);
   });
   return (
     <div

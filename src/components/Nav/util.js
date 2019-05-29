@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-export const send = (dispatch, history) => (e, tp) => {
+import { NavLink } from "react-router-dom";
+export const send = dispatch => (e, tp) => {
   e.preventDefault();
   dispatch({
     type: "setFilter",
@@ -10,18 +10,17 @@ export const send = (dispatch, history) => (e, tp) => {
 
 export const generateNavItems = (
   children,
-  routeTo,
   key,
   displayText,
   qVal,
   styleSelected
 ) => (
   <li key={key} className={`${qVal === key ? styleSelected : ""}`}>
-    <Link to={`/${key}`} id={key}>
+    <NavLink to={`/${key}`} id={key}>
       <div>{children}</div>
       <div>
         <span>{displayText}</span>
       </div>
-    </Link>
+    </NavLink>
   </li>
 );

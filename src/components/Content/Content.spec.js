@@ -40,10 +40,8 @@ test("Content in darkMode should render successfully", () => {
 
     const location = {};
     location.pathname = "/all";
-    const history = {};
-    history.push = () => {};
 
-    const ContentComponent = () => Content({ location, history });
+    const ContentComponent = () => Content({ location });
 
     const mockDarkModeState = { ...mockState, ...{ darkMode: true } };
 
@@ -55,7 +53,7 @@ test("Content in darkMode should render successfully", () => {
     );
     ReactDOM.render(
       <StoreContext.Provider value={[mockDarkModeState, () => {}]}>
-        <ContentComponent location={location} history={history} />
+        <ContentComponent location={location} />
       </StoreContext.Provider>,
       containerDarkMode
     );

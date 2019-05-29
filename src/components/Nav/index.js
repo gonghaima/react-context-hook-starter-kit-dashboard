@@ -2,12 +2,10 @@ import React from "react";
 import styles from "./Nav.module.scss";
 import { Star, VerifiedUser, People, AccountCircle, Inbox } from "../../icons";
 import { StoreContext } from "../../store";
-import { send, generateNavItems } from "./util";
+import { generateNavItems } from "./util";
 
 export default props => {
-  const history = props;
-  const [state, dispatch] = React.useContext(StoreContext);
-  const sendFilter = send(dispatch, history);
+  const [state] = React.useContext(StoreContext);
   const navItemsData = [
     { icon: <AccountCircle />, key: "all", display: "All Users" },
     { icon: <Star />, key: "favorites", display: "Favorites" },
@@ -22,7 +20,6 @@ export default props => {
           {navItemsData.map(({ icon, key, display }) =>
             generateNavItems(
               icon,
-              sendFilter,
               key,
               display,
               state.selected.queryValue,

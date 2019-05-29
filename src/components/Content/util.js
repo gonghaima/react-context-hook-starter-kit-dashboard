@@ -1,4 +1,4 @@
-export const send = (dispatch, history, location, state) => {
+export const send = (dispatch, location, state) => {
   if (location.pathname.slice(1) !== state.selected.queryValue) {
     dispatch({
       type: "setFilter",

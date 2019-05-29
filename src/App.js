@@ -8,7 +8,7 @@ import Content from "./components/Content";
 import Header from "./components/Header";
 import SubHeader from "./components/SubHeader";
 import Main from "./components/Main";
-import renderNav from "./components/Nav";
+import Nav from "./components/Nav";
 
 const routeItems = [
   "",
@@ -21,14 +21,14 @@ const routeItems = [
 
 //location.pathname
 
-const defaultComponent = ({ history, location }) => {
+const defaultComponent = ({ location }) => {
   return (
     <>
       <Header />
       <SubHeader />
       <Main>
-        {renderNav(history)}
-        <Content location={location} history={history} />
+        <Nav />
+        <Content location={location} />
       </Main>
     </>
   );

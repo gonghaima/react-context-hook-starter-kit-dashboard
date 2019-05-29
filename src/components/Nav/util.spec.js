@@ -16,9 +16,9 @@ afterEach(() => {
   container = null;
 });
 
-it("should dispatch and push history", done => {
+it("should dispatch ", done => {
   const dispatchMock = jest.fn();
-  const historyMock = jest.fn();
+
   const ePreventDefaultMock = jest.fn();
   const evt = {};
   evt.preventDefault = ePreventDefaultMock;
@@ -27,10 +27,6 @@ it("should dispatch and push history", done => {
   const sendBuilder = send(dispatchMock, his);
   sendBuilder(evt, "administrator");
   expect(ePreventDefaultMock.mock.calls.length).toBe(1);
-  setTimeout(() => {
-    expect(historyMock.mock.calls.length).toBe(1);
-    done();
-  }, 4000);
 });
 
 it("should attach onClick to routing event", () => {
