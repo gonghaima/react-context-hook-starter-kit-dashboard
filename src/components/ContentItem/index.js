@@ -5,7 +5,7 @@ import Avatar from "../Avatar";
 
 export default ({ user }) => {
   return (
-    <div className={styles.contentItemWrapper}>
+    <div className={styles.contentItemWrapper} data-test-id="dataContent">
       <Avatar>
         <Person />
       </Avatar>

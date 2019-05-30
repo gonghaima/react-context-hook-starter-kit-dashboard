@@ -3,7 +3,7 @@
 context("Navigation", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000");
-    cy.get("#nonAdmins").click();
+    cy.get('[data-test-id="nonAdmins"]').click();
   });
 
   it("cy.go() - go back or forward in the browser's history", () => {

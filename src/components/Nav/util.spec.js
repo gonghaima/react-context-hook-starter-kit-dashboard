@@ -24,9 +24,7 @@ it("should dispatch ", done => {
   const ePreventDefaultMock = jest.fn();
   const evt = {};
   evt.preventDefault = ePreventDefaultMock;
-  const his = {};
-  his.push = historyMock;
-  const sendBuilder = send(dispatchMock, his);
+  const sendBuilder = send(dispatchMock);
   sendBuilder(evt, "administrator");
   expect(ePreventDefaultMock.mock.calls.length).toBe(1);
   done();

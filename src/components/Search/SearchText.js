@@ -13,6 +13,7 @@ export default () => {
         placeholder="Search"
         onChange={setSearch}
         className={styles.searchInput}
+        data-test-id="textSearch"
       />
     </div>
   );

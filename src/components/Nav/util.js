@@ -16,7 +16,7 @@ export const generateNavItems = (
   styleSelected
 ) => (
   <li key={key} className={`${qVal === key ? styleSelected : ""}`}>
-    <NavLink to={`/${key}`} id={key}>
+      <NavLink to={`/${key}`} data-test-id={key}>
       <div>{children}</div>
       <div>
         <span>{displayText}</span>
