@@ -18,7 +18,11 @@ export default () => (
               </a>
               <h4>Product Name</h4>
             </div>
-            <div className={styles.icon} onClick={toggleDisplay(dispatch)}>
+            <div
+              className={styles.icon}
+              data-test-id="switchMode"
+              onClick={toggleDisplay(dispatch)}
+            >
               {state.darkMode ? <BurstMode /> : <ChromeReaderMode />}
             </div>
           </div>
