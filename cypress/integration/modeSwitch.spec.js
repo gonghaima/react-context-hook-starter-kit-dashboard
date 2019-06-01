@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-context("Navigation", () => {
+context("Dark mode switch component", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000");
     cy.wait(1000);
