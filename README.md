@@ -26,6 +26,7 @@ TODO:
 - [x] Unit test
 - [x] Routing fix
 - [ ] Layout abstraction
+- [ ] Add Sping Animation
 - [x] E2E test
 - [x] pre commit check
 - [x] linting check
