@@ -26,7 +26,7 @@ TODO:
 - [x] Unit test
 - [x] Routing fix
 - [ ] Layout abstraction
-- [ ] E2E test
+- [x] E2E test
 - [x] pre commit check
 - [x] linting check
 
