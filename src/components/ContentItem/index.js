@@ -5,13 +5,23 @@ import Avatar from "../Avatar";
 import { useSpring, animated } from "react-spring";
 
 export default ({ user }) => {
-  const style = useSpring({ opacity: 1, from: { opacity: 0 } });
+  const style = useSpring({
+    config: { duration: 2000 },
+    opacity: 1,
+    transform: "translate3d(0,0,0)",
+    from: { opacity: 0, transform: "translate3d(0px, -62px, -135px)" }
+  });
+
   return (
-    <div className={styles.contentItemWrapper} data-test-id="dataContent">
+    <animated.div
+      style={style}
+      className={styles.contentItemWrapper}
+      data-test-id="dataContent"
+    >
       <Avatar>
         <Person />
       </Avatar>
-      <animated.div style={style} className={styles.contentItemDetails}>
+      <div className={styles.contentItemDetails}>
         <div className={styles.userSection}>
           <div className={styles.userName}>{user.fullName}</div>
           <small>{user.email}</small>
@@ -23,7 +33,7 @@ export default ({ user }) => {
             <MoreVert />
           </small>
         </div>
-      </animated.div>
-    </div>
+      </div>
+    </animated.div>
   );
 };
