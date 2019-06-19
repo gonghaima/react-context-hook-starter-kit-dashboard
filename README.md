@@ -25,8 +25,8 @@ TODO:
 - [x] Try "sticky instead of fixed", check differences.
 - [x] Unit test
 - [x] Routing fix
-- [ ] Layout abstraction
-- [ ] Add Sping Animation
+- [x] Layout abstraction
+- [x] Add Spring Animation
 - [x] E2E test
 - [x] pre commit check
 - [x] linting check
